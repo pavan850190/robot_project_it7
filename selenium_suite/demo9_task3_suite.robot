@@ -12,9 +12,10 @@ Tc1
     Input Text    id=clearPass    pass
     Select From List By Value    name=languageChoice    18
     Click Element    id=login-button
-    Switch Window       new
-    Click Element    xpath=//div[text()='Messages]
-    Click Element    link=Add New
+    Switch Window    OpenEMR
+    Click Element    xpath=//span[text()='Message Center']
+    Select Frame    xpath=//iframe[@name='msg']
+    Click Element    xpath=//a[text()='Add New']
     Select From List By Label    id=form_note_type      Pharmacy
     Select From List By Label    id=form_message_status     New
     Select From List By Label    id=users   Jarvis, Fred
