@@ -1,6 +1,7 @@
 *** Settings ***
 Library     SeleniumLibrary
 Library    OperatingSystem
+
 *** Test Cases ***
 Tc1
     Append To Environment Variable   Path    D:\\robotProject\\selenium_suite\\driver
