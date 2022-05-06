@@ -18,3 +18,4 @@ Tc1
     Input Text    id=getInTouchEmpCount    25
     Click Element    xpath=//button[text()='Get in Touch']
     Element Text Should Be    xpath=//div[contains(text(),'digits')]    Mobile Number should be 10 digits
+    Element Should Contain    xpath=//p[contains(text(),'while')]       let us help you take care of your employee health and wellness.
