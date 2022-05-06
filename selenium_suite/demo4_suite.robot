@@ -17,5 +17,5 @@ Tc1
     Select From List By Label    name=CompanyCountry        
     Click Element     xpath=//button[text()='Start My Trial']
     Click Element    xpath=(//div[@class='checkbox-ui])[1]
-    Click Element    xpath=//span[contains(@id,'userPhone')]        Enter a valid phone number
+    Element Text Should Be    xpath=//span[contains(@id,'userPhone')]        Enter a valid phone number
     Close Browser
