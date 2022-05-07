@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220507 17:02:12.440" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo2 Zomato" source="D:\robotProject\appium_suite\demo2_zomato.robot">
+<test id="s1-t1" name="Tc1" line="5">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>remote_url=http://hub-cloud.browserstack.com/wd/hub</arg>
+<arg>browserstack.user=pavanraj_o4QGcU</arg>
+<arg>browserstack.key=fSpobzNiisxzBxtbzCPG</arg>
+<arg>app=bs://ec01880279145c2a91d29996ab82ae871181a929</arg>
+<arg>device=Google Pixel 3</arg>
+<arg>os_version=9.0</arg>
+<arg>project=lt6_project</arg>
+<arg>build=lt6_build</arg>
+<arg>name=khanacademy test</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220507 17:02:16.662" endtime="20220507 17:02:47.550"/>
+</kw>
+<kw name="Get Source" library="AppiumLibrary">
+<var>${app_source}</var>
+<doc>Returns the entire source of the current page.</doc>
+<msg timestamp="20220507 17:02:48.065" level="INFO">${app_source} = &lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2028"&gt;
+  &lt;android.widget.FrameLayout index="0" package="com.applicat...</msg>
+<status status="PASS" starttime="20220507 17:02:47.550" endtime="20220507 17:02:48.065"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${app_source}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220507 17:02:48.065" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2028"&gt;
+  &lt;android.widget.FrameLayout index="0" package="com.application.zomato" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2028]" displayed="true"&gt;
+    &lt;android.widget.LinearLayout index="0" package="com.application.zomato" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2028]" displayed="true"&gt;
+      &lt;android.widget.FrameLayout index="0" package="com.application.zomato" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2028]" displayed="true"&gt;
+        &lt;android.widget.LinearLayout index="0" package="com.application.zomato" class="android.widget.LinearLayout" text="" resource-id="com.application.zomato:id/action_bar_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2028]" displayed="true"&gt;
+          &lt;android.widget.FrameLayout index="0" package="com.application.zomato" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2028]" displayed="true" /&gt;
+        &lt;/android.widget.LinearLayout&gt;
+      &lt;/android.widget.FrameLayout&gt;
+    &lt;/android.widget.LinearLayout&gt;
+  &lt;/android.widget.FrameLayout&gt;
+&lt;/hierarchy&gt;</msg>
+<status status="PASS" starttime="20220507 17:02:48.065" endtime="20220507 17:02:48.065"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220507 17:02:48.065" endtime="20220507 17:02:49.255"/>
+</kw>
+<status status="PASS" starttime="20220507 17:02:16.662" endtime="20220507 17:02:49.255"/>
+</test>
+<status status="PASS" starttime="20220507 17:02:12.455" endtime="20220507 17:02:49.255"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo2 Zomato">Demo2 Zomato</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
