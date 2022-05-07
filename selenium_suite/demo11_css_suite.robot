@@ -24,3 +24,8 @@ Tc1
     Element Should Contain    id=error_reply_to     Please choose a patient
     Unselect Frame
     Close Browser
+
+*** Comments ***
+css selector
+#id
+.class name
