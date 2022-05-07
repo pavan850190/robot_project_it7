@@ -1,63 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220504 17:16:11.033" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo2" source="D:\robotProject\robot_suite\demo2.robot">
-<test id="s1-t1" name="Tc1" line="4">
-<kw name="Create File" library="OperatingSystem">
-<arg>path=D:\\robotProject\\robot_suite\\hii.txt</arg>
-<doc>Creates a file with the given content and encoding.</doc>
-<msg timestamp="20220504 17:16:11.111" level="INFO" html="true">Created file '&lt;a href="file://D:\robotProject\robot_suite\hii.txt"&gt;D:\robotProject\robot_suite\hii.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20220504 17:16:11.111" endtime="20220504 17:16:11.111"/>
-</kw>
-<kw name="List Files In Directory" library="OperatingSystem">
-<var>${list}</var>
-<arg>path=D:\\robotProject\\robot_suite\\</arg>
-<doc>Wrapper for `List Directory` that returns only files.</doc>
-<msg timestamp="20220504 17:16:11.111" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\robotProject\robot_suite"&gt;D:\robotProject\robot_suite&lt;/a&gt;'.</msg>
-<msg timestamp="20220504 17:16:11.111" level="INFO">6 files:
-demo1_suite.robot
-demo2.robot
-hii.txt
-log.html
-output.xml
-report.html</msg>
-<msg timestamp="20220504 17:16:11.111" level="INFO">${list} = ['demo1_suite.robot', 'demo2.robot', 'hii.txt', 'log.html', 'output.xml', 'report.html']</msg>
-<status status="PASS" starttime="20220504 17:16:11.111" endtime="20220504 17:16:11.111"/>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220507 12:35:08.320" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo4" source="D:\robotProject\robot_suite\demo4.robot">
+<test id="s1-t1" name="Tc3" line="18">
+<kw name="Create List" library="BuiltIn">
+<var>@{fruit}</var>
+<arg>apple</arg>
+<arg>grapes</arg>
+<arg>orange</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20220507 12:35:08.852" level="INFO">@{fruit} = [ apple | grapes | orange ]</msg>
+<status status="PASS" starttime="20220507 12:35:08.852" endtime="20220507 12:35:08.852"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${list}</arg>
+<arg>${fruit}[1]</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220504 17:16:11.111" endtime="20220504 17:16:11.111"/>
+<status status="PASS" starttime="20220507 12:35:08.852" endtime="20220507 12:35:08.852"/>
 </kw>
-<status status="PASS" starttime="20220504 17:16:11.111" endtime="20220504 17:16:11.111"/>
-</test>
-<test id="s1-t2" name="Tc2" line="8">
-<kw name="Remove File" library="OperatingSystem">
-<arg>path=D:\\robotProject\\robot_suite\\hii.txt</arg>
-<doc>Removes a file with the given path.</doc>
-<msg timestamp="20220504 17:16:11.127" level="INFO" html="true">Removed file '&lt;a href="file://D:\robotProject\robot_suite\hii.txt"&gt;D:\robotProject\robot_suite\hii.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20220504 17:16:11.127" endtime="20220504 17:16:11.127"/>
+<kw name="Append To List" library="Collections">
+<arg>${fruit}</arg>
+<arg>mango</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220507 12:35:08.852" endtime="20220507 12:35:08.852"/>
 </kw>
-<status status="PASS" starttime="20220504 17:16:11.127" endtime="20220504 17:16:11.127"/>
-</test>
-<test id="s1-t3" name="Tc3" line="10">
-<kw name="Create Dictionary" library="BuiltIn">
-<arg>D:\\robotProject\\robot_suite2</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220504 17:16:11.127" level="FAIL">Expected even number of keys and values, got 1.</msg>
-<status status="FAIL" starttime="20220504 17:16:11.127" endtime="20220504 17:16:11.127"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${fruit}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220507 12:35:08.852" endtime="20220507 12:35:08.852"/>
 </kw>
-<status status="FAIL" starttime="20220504 17:16:11.127" endtime="20220504 17:16:11.127">Expected even number of keys and values, got 1.</status>
+<kw name="Remove From List" library="Collections">
+<arg>${fruit}</arg>
+<arg>1</arg>
+<doc>Removes and returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" starttime="20220507 12:35:08.852" endtime="20220507 12:35:08.852"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${fruit}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220507 12:35:08.852" endtime="20220507 12:35:08.852"/>
+</kw>
+<kw name="Insert Into List" library="Collections">
+<arg>${fruit}</arg>
+<arg>2</arg>
+<arg>guva</arg>
+<doc>Inserts ``value`` into ``list`` to the position specified with ``index``.</doc>
+<status status="PASS" starttime="20220507 12:35:08.852" endtime="20220507 12:35:08.852"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${fruit}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220507 12:35:08.852" endtime="20220507 12:35:08.852"/>
+</kw>
+<status status="PASS" starttime="20220507 12:35:08.836" endtime="20220507 12:35:08.852"/>
 </test>
-<status status="FAIL" starttime="20220504 17:16:11.033" endtime="20220504 17:16:11.127"/>
+<status status="PASS" starttime="20220507 12:35:08.320" endtime="20220507 12:35:08.852"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="1" skip="0" id="s1" name="Demo2">Demo2</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo4">Demo4</stat>
 </suite>
 </statistics>
 <errors>

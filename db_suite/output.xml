@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220507 11:22:16.967" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220507 12:07:41.330" rpa="false" schemaversion="3">
 <suite id="s1" name="Demo2" source="D:\robotProject\db_suite\demo2.robot">
-<test id="s1-t1" name="Tc1" line="8">
+<test id="s1-t1" name="Tc5" line="26">
 <kw name="Connect To Database" library="DatabaseLibrary" type="SETUP">
 <arg>dbapiModuleName=pymysql</arg>
 <arg>dbName=dbfree_db</arg>
@@ -11,84 +11,47 @@
 <arg>dbPort=3306</arg>
 <doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
 connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
-<msg timestamp="20220507 11:22:17.155" level="INFO">Connecting using : pymysql.connect(db=dbfree_db, user=dbfree_db, passwd=12345678, host=db4free.net, port=3306, charset=None) </msg>
-<status status="PASS" starttime="20220507 11:22:17.045" endtime="20220507 11:22:18.405"/>
+<msg timestamp="20220507 12:07:41.518" level="INFO">Connecting using : pymysql.connect(db=dbfree_db, user=dbfree_db, passwd=12345678, host=db4free.net, port=3306, charset=None) </msg>
+<status status="PASS" starttime="20220507 12:07:41.424" endtime="20220507 12:07:43.703"/>
 </kw>
-<kw name="Row Count" library="DatabaseLibrary">
-<var>${row_count}</var>
+<kw name="Query" library="DatabaseLibrary">
+<var>${output}</var>
 <arg>select * from Products</arg>
-<doc>Uses the input `selectStatement` to query the database and returns the number of rows from the query. Set
-optional input `sansTran` to True to run command without an explicit transaction commit or rollback.</doc>
-<msg timestamp="20220507 11:22:18.405" level="INFO">Executing : Row Count  |  select * from Products </msg>
-<msg timestamp="20220507 11:22:19.045" level="INFO">${row_count} = 81</msg>
-<status status="PASS" starttime="20220507 11:22:18.405" endtime="20220507 11:22:19.045"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${row_count}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220507 11:22:19.045" endtime="20220507 11:22:19.061"/>
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
+input `sansTran` to True to run command without an explicit transaction commit or rollback.
+Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
+<msg timestamp="20220507 12:07:43.703" level="INFO">Executing : Query  |  select * from Products </msg>
+<msg timestamp="20220507 12:07:44.359" level="INFO">${output} = ((1, 'Basu', 'ji'), (10, 'Basu', '7 plus 128 Gb'), (11, 'Basu', 'mayank'), (12, 'product', 'hi'), (13, 'Basu', 'xxx'), (14, 'Air india', 'domestic'), (15, 'Air india', 'domestic'), (23, 'Basu', 'justn...</msg>
+<status status="PASS" starttime="20220507 12:07:43.703" endtime="20220507 12:07:44.359"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>${row_count}</arg>
+<arg>${output}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220507 11:22:19.061" level="INFO">81</msg>
-<status status="PASS" starttime="20220507 11:22:19.061" endtime="20220507 11:22:19.061"/>
+<msg timestamp="20220507 12:07:44.359" level="INFO">((1, 'Basu', 'ji'), (10, 'Basu', '7 plus 128 Gb'), (11, 'Basu', 'mayank'), (12, 'product', 'hi'), (13, 'Basu', 'xxx'), (14, 'Air india', 'domestic'), (15, 'Air india', 'domestic'), (23, 'Basu', 'justname'), (42, 'Basu', 'isha'), (50, 'apsar', 'justname'), (51, 'apsar', 'justname'), (67, 'Basu', 'justname'), (100, 'Basu', 'amazon'), (101, 'Basu', 'trainee'), (102, 'Basu', 'amazon'), (103, 'Basu', 'name_field'), (111, 'Basu', 'amazon'), (112, 'Air india', 'domestic'), (115, 'Air india', 'domestic'), (120, 'Air india', 'domestic'), (123, 'Basu', 'Govind'), (140, 'ss', 'heloo'), (143, 'Basu', 'student'), (150, 'Air india', 'domestic'), (160, 'Air india', 'domestic'), (180, 'Air india', 'domestic'), (221, 'Basu', '444'), (222, 'Basu', 'yyy'), (223, 'Basu', '444'), (227, 'Basu', '444'), (500, 'Basu', 'mobile'), (512, 'sai', 'B-tech'), (542, 'Basu', 'just name'), (545, 'RASHEL', 'just name'), (587, 'konda', 'M-tech'), (650, 'Basu', 'just name'), (651, 'varsha', 'just name'), (655, 'Nav', 'Hi'), (666, 'Basu', 'another description'), (701, 'Basu', 'my name'), (707, 'daniel', 'just name'), (709, 'Basu', 'my name'), (710, 'Basu', 'my name'), (715, 'Basu', 'my name'), (716, 'Basu', 'my name'), (717, 'Basu', 'my name'), (720, 'sam', 'B-tech'), (730, 'Basu', 'my name'), (740, 'Basu', 'my name'), (811, 'ambika', 'just name'), (812, 'Basu', 'just name'), (1001, 'Basu', '7 plus 128 Gb'), (1002, 'Basu', 'demo'), (1003, 'Basu', 'demo'), (1004, 'Basu', 'aaa'), (1005, 'Basu', 'demo'), (1008, 'Basu', 'aaa'), (1009, 'Basu', 'just name'), (1020, 'Basu', 'name'), (1023, 'Anu', 'name'), (1029, 'Basu', 'student'), (1033, 'Anu', 'name'), (1045, 'Basu', 'bts'), (1048, 'Basu', 'demo'), (1054, 'Basu', 'student'), (1100, 'Basu', 'employee'), (1111, 'Basu', 'student'), (1602, 'Basu', 'fresher'), (1997, 'Basu', 'LAppy'), (1998, 'Basu', '9918989'), (1999, 'Basu', 'Engineer'), (2100, 'Basu', 'demo'), (2500, 'Basu', 'Student'), (2666, 'Sajid', 'another description'), (4001, 'Basu', 'LAppy'), (5000, 'Basu', 'Mobile'), (5001, 'Basu', 'mobile'), (5002, 'Basu', 'Mobile'), (5005, 'Basu', 'Mobile'), (5009, 'Basu', 'mobile'), (5011, 'Basu', 'mobile'), (5012, 'Basu', 'mobile'), (5014, 'Basu', 'mobile'), (5100, 'Basu', 'student'), (6000, 'Basu', 'student'), (7045, 'ss', 'hi'), (9876, 'abcd', 'efgh'), (9900, 'product', 'hi'), (10001, 'Ananda_upadhaya', 'name_field'), (11224, 'jam', 'tech'), (11234, 'abcd', 'efgh'), (12345, 'Basu', 'name_field'), (12399, 'laptop', 'good'), (13224, 'roopsi', 'tech'), (23451, 'pro', 'hai'), (23452, 'pro', 'hai'), (23453, 'pro', 'hai'), (23670, 'pro', 'hai'), (23671, 'pro', 'hai'), (23672, 'bala', 'hai'), (34656, 'hello', 'sdddd'), (35656, 'shubham', 'sdddd'), (50001, 'Basu', 'Laptop'), (50101, 'Basu', 'LAppy'), (98768, 'abcd', 'efgh'), (121212, 'Basu', 'Mobile'), (123456, 'Basu', 'AE'), (123991, 'laptop', 'good'), (345656, 'hello', 'sdddd'), (356567, 'Anchal', 'Tiwari'), (667709, 'roopsi', 'tech'), (995678, 'roopsi', 'tech'), (1239911, 'laptop', 'good'), (1801033, 'laptop', 'good'), (3456756, 'hello', 'sdddd'), (3565679, 'Anchal', 'Tiwari'), (34567567, 'balaji', 'sdddd'), (99007716, 'sakthi', 'name'), (99007717, 'sakthi', 'name'), (99007718, 'janu', 'LTTS'), (99007719, 'laptop', 'good'), (99007736, 'Abhi', 'Tiwari'), (1801033234, 'laptop', 'good'))</msg>
+<status status="PASS" starttime="20220507 12:07:44.359" endtime="20220507 12:07:44.359"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${output}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220507 12:07:44.359" endtime="20220507 12:07:44.375"/>
 </kw>
 <kw name="Disconnect From Database" library="DatabaseLibrary" type="TEARDOWN">
 <doc>Disconnects from the database.</doc>
-<msg timestamp="20220507 11:22:19.061" level="INFO">Executing : Disconnect From Database</msg>
-<status status="PASS" starttime="20220507 11:22:19.061" endtime="20220507 11:22:19.061"/>
+<msg timestamp="20220507 12:07:44.375" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" starttime="20220507 12:07:44.375" endtime="20220507 12:07:44.375"/>
 </kw>
-<status status="PASS" starttime="20220507 11:22:17.045" endtime="20220507 11:22:19.061"/>
+<status status="PASS" starttime="20220507 12:07:41.424" endtime="20220507 12:07:44.375"/>
 </test>
-<test id="s1-t2" name="Tc2" line="12">
-<kw name="Connect To Database" library="DatabaseLibrary" type="SETUP">
-<arg>dbapiModuleName=pymysql</arg>
-<arg>dbName=dbfree_db</arg>
-<arg>dbUsername=dbfree_db</arg>
-<arg>dbPassword=12345678</arg>
-<arg>dbHost=db4free.net</arg>
-<arg>dbPort=3306</arg>
-<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
-connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
-<msg timestamp="20220507 11:22:19.061" level="INFO">Connecting using : pymysql.connect(db=dbfree_db, user=dbfree_db, passwd=12345678, host=db4free.net, port=3306, charset=None) </msg>
-<status status="PASS" starttime="20220507 11:22:19.061" endtime="20220507 11:22:27.062"/>
-</kw>
-<kw name="Table Must Exist" library="DatabaseLibrary">
-<arg>Products</arg>
-<doc>Check if the table given exists in the database. Set optional input `sansTran` to True to run command without an
-explicit transaction commit or rollback.</doc>
-<msg timestamp="20220507 11:22:27.062" level="INFO">Executing : Table Must Exist  |  Products </msg>
-<msg timestamp="20220507 11:22:27.062" level="INFO">Executing : Row Count  |  SELECT * FROM information_schema.tables WHERE table_name='Products' </msg>
-<status status="PASS" starttime="20220507 11:22:27.062" endtime="20220507 11:22:29.327"/>
-</kw>
-<kw name="Row Count Is Equal To X" library="DatabaseLibrary">
-<arg>select * from Products</arg>
-<arg>81</arg>
-<doc>Check if the number of rows returned from `selectStatement` is equal to the value submitted. If not, then this
-will throw an AssertionError. Set optional input `sansTran` to True to run command without an explicit
-transaction commit or rollback.</doc>
-<msg timestamp="20220507 11:22:29.327" level="INFO">Executing : Row Count Is Equal To X  |  select * from Products  |  81 </msg>
-<msg timestamp="20220507 11:22:29.327" level="INFO">Executing : Row Count  |  select * from Products </msg>
-<status status="PASS" starttime="20220507 11:22:29.327" endtime="20220507 11:22:29.999"/>
-</kw>
-<kw name="Disconnect From Database" library="DatabaseLibrary" type="TEARDOWN">
-<doc>Disconnects from the database.</doc>
-<msg timestamp="20220507 11:22:29.999" level="INFO">Executing : Disconnect From Database</msg>
-<status status="PASS" starttime="20220507 11:22:29.999" endtime="20220507 11:22:29.999"/>
-</kw>
-<status status="PASS" starttime="20220507 11:22:19.061" endtime="20220507 11:22:29.999"/>
-</test>
-<status status="PASS" starttime="20220507 11:22:16.983" endtime="20220507 11:22:29.999"/>
+<status status="PASS" starttime="20220507 12:07:41.330" endtime="20220507 12:07:44.375"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Demo2">Demo2</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo2">Demo2</stat>
 </suite>
 </statistics>
 <errors>
