@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220507 17:02:12.440" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo2 Zomato" source="D:\robotProject\appium_suite\demo2_zomato.robot">
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220509 14:03:39.799" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo3" source="D:\robotProject\appium_suite\demo3.robot">
 <test id="s1-t1" name="Tc1" line="5">
 <kw name="Open Application" library="AppiumLibrary">
 <arg>remote_url=http://hub-cloud.browserstack.com/wd/hub</arg>
 <arg>browserstack.user=pavanraj_o4QGcU</arg>
 <arg>browserstack.key=fSpobzNiisxzBxtbzCPG</arg>
-<arg>app=bs://ec01880279145c2a91d29996ab82ae871181a929</arg>
-<arg>device=Google Pixel 3</arg>
+<arg>app=bs://c1d2b0e0778956abacad246f0ad6dcdcf71e8cdc</arg>
+<arg>device=Samsung Galaxy S10e</arg>
 <arg>os_version=9.0</arg>
 <arg>project=lt6_project</arg>
 <arg>build=lt6_build</arg>
@@ -18,40 +18,97 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20220507 17:02:16.662" endtime="20220507 17:02:47.550"/>
+<status status="PASS" starttime="20220509 14:03:43.982" endtime="20220509 14:04:23.611"/>
 </kw>
 <kw name="Get Source" library="AppiumLibrary">
 <var>${app_source}</var>
 <doc>Returns the entire source of the current page.</doc>
-<msg timestamp="20220507 17:02:48.065" level="INFO">${app_source} = &lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
-&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2028"&gt;
-  &lt;android.widget.FrameLayout index="0" package="com.applicat...</msg>
-<status status="PASS" starttime="20220507 17:02:47.550" endtime="20220507 17:02:48.065"/>
+<msg timestamp="20220509 14:04:24.242" level="INFO">${app_source} = &lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2020"&gt;
+  &lt;android.widget.FrameLayout index="0" package="org.khanacad...</msg>
+<status status="PASS" starttime="20220509 14:04:23.612" endtime="20220509 14:04:24.242"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${app_source}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220507 17:02:48.065" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
-&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2028"&gt;
-  &lt;android.widget.FrameLayout index="0" package="com.application.zomato" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2028]" displayed="true"&gt;
-    &lt;android.widget.LinearLayout index="0" package="com.application.zomato" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2028]" displayed="true"&gt;
-      &lt;android.widget.FrameLayout index="0" package="com.application.zomato" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2028]" displayed="true"&gt;
-        &lt;android.widget.LinearLayout index="0" package="com.application.zomato" class="android.widget.LinearLayout" text="" resource-id="com.application.zomato:id/action_bar_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2028]" displayed="true"&gt;
-          &lt;android.widget.FrameLayout index="0" package="com.application.zomato" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2028]" displayed="true" /&gt;
-        &lt;/android.widget.LinearLayout&gt;
+<msg timestamp="20220509 14:04:24.244" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2020"&gt;
+  &lt;android.widget.FrameLayout index="0" package="org.khanacademy.android" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2020]" displayed="true"&gt;
+    &lt;android.widget.LinearLayout index="0" package="org.khanacademy.android" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2020]" displayed="true"&gt;
+      &lt;android.widget.FrameLayout index="0" package="org.khanacademy.android" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,117][1080,2020]" displayed="true"&gt;
+        &lt;android.widget.FrameLayout index="0" package="org.khanacademy.android" class="android.widget.FrameLayout" text="" resource-id="org.khanacademy.android:id/action_bar_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,117][1080,2020]" displayed="true"&gt;
+          &lt;android.widget.FrameLayout index="0" package="org.khanacademy.android" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,117][1080,2020]" displayed="true"&gt;
+            &lt;android.widget.LinearLayout index="0" package="org.khanacademy.android" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,117][1080,2020]" displayed="true"&gt;
+              &lt;android.widget.FrameLayout index="0" package="org.khanacademy.android" class="android.widget.FrameLayout" text="" resource-id="org.khanacademy.android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,117][1080,1992]" displayed="true"&gt;
+                &lt;android.widget.FrameLayout index="0" package="org.khanacademy.android" class="android.widget.FrameLayout" text="" resource-id="org.khanacademy.android:id/content_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,117][1080,1992]" displayed="true"&gt;
+                  &lt;android.widget.FrameLayout index="0" package="org.khanacademy.android" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,117][1080,1992]" displayed="true" /&gt;
+                &lt;/android.widget.FrameLayout&gt;
+              &lt;/android.widget.FrameLayout&gt;
+              &lt;android.widget.LinearLayout index="1" package="org.khanacademy.android" class="android.widget.LinearLayout" text="" resource-id="org.khanacademy.android:id/tabs" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1992][1080,2020]" displayed="true"&gt;
+                &lt;android.widget.Button index="0" package="org.khanacademy.android" class="android.widget.Button" text="Home" content-desc="Explore tab" resource-id="org.khanacademy.android:id/tab_bar_button_home" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[0,2004][360,2020]" displayed="true" /&gt;
+                &lt;android.widget.Button index="1" package="org.khanacademy.android" class="android.widget.Button" text="Search" content-desc="Search tab" resource-id="org.khanacademy.android:id/tab_bar_button_search" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[360,2004][720,2020]" displayed="true" /&gt;
+                &lt;android.widget.Button index="2" package="org.khanacademy.android" class="android.widget.Button" text="Bookmarks" content-desc="Bookmarks tab" resource-id="org.khanacademy.android:id/tab_bar_button_bookmarks" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[720,2004][1080,2020]" displayed="true" /&gt;
+              &lt;/android.widget.LinearLayout&gt;
+            &lt;/android.widget.LinearLayout&gt;
+          &lt;/android.widget.FrameLayout&gt;
+        &lt;/android.widget.FrameLayout&gt;
       &lt;/android.widget.FrameLayout&gt;
     &lt;/android.widget.LinearLayout&gt;
+    &lt;android.view.View index="1" package="org.khanacademy.android" class="android.view.View" text="" resource-id="android:id/statusBarBackground" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,117]" displayed="true" /&gt;
   &lt;/android.widget.FrameLayout&gt;
 &lt;/hierarchy&gt;</msg>
-<status status="PASS" starttime="20220507 17:02:48.065" endtime="20220507 17:02:48.065"/>
+<status status="PASS" starttime="20220509 14:04:24.243" endtime="20220509 14:04:24.244"/>
 </kw>
-<kw name="Close Application" library="AppiumLibrary">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>50s</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220509 14:04:24.244" endtime="20220509 14:04:24.271"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='Dismiss']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220509 14:04:24.276" level="INFO">Clicking element 'xpath=//*[@text='Dismiss']'.</msg>
+<status status="PASS" starttime="20220509 14:04:24.272" endtime="20220509 14:04:27.256"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//*[@content-desc='Settings']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220509 14:04:27.260" level="INFO">Clicking element 'xpath=//*[@content-desc='Settings']'.</msg>
+<status status="PASS" starttime="20220509 14:04:27.257" endtime="20220509 14:04:29.159"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='Sign in']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220509 14:04:29.164" level="INFO">Clicking element 'xpath=//*[@text='Sign in']'.</msg>
+<status status="PASS" starttime="20220509 14:04:29.161" endtime="20220509 14:04:30.590"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='Sign up with email']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220509 14:04:30.593" level="INFO">Clicking element 'xpath=//*[@text='Sign up with email']'.</msg>
+<status status="PASS" starttime="20220509 14:04:30.590" endtime="20220509 14:04:31.847"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=//*[@text='First name']</arg>
+<arg>pavan</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220509 14:04:31.852" level="INFO">Typing text 'pavan' into text field 'xpath=//*[@text='First name']'</msg>
+<status status="PASS" starttime="20220509 14:04:31.848" endtime="20220509 14:04:33.099"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=//*[@text='Last name']</arg>
+<arg>raj</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220509 14:04:33.104" level="INFO">Typing text 'raj' into text field 'xpath=//*[@text='Last name']'</msg>
+<status status="PASS" starttime="20220509 14:04:33.101" endtime="20220509 14:04:34.278"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20220507 17:02:48.065" endtime="20220507 17:02:49.255"/>
+<status status="PASS" starttime="20220509 14:04:34.279" endtime="20220509 14:04:35.923"/>
 </kw>
-<status status="PASS" starttime="20220507 17:02:16.662" endtime="20220507 17:02:49.255"/>
+<status status="PASS" starttime="20220509 14:03:43.981" endtime="20220509 14:04:35.924"/>
 </test>
-<status status="PASS" starttime="20220507 17:02:12.455" endtime="20220507 17:02:49.255"/>
+<status status="PASS" starttime="20220509 14:03:39.830" endtime="20220509 14:04:35.927"/>
 </suite>
 <statistics>
 <total>
@@ -60,7 +117,7 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo2 Zomato">Demo2 Zomato</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo3">Demo3</stat>
 </suite>
 </statistics>
 <errors>
