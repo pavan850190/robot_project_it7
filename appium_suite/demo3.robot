@@ -22,6 +22,7 @@ Tc1
     Click Element    xpath=//*[@text='Sign up with email']
     Input Text    xpath=//*[@text='First name']    pavan
     Input Text    xpath=//*[@text='Last name']    raj
+    Swipe By Percent    start_x    start_y    end_x    end_y
 
 
 
